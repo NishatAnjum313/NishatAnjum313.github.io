@@ -1,0 +1,21 @@
+ 
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text":"GDP per-capita and Life Expectancy",
+    "subtitle": ["Source: World Bank"]},
+
+  "width": 400,
+  "height": 300,
+ 
+  "data": {"url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/1/s1_example_data/gdp_and_life_expectency.csv"},
+ 
+  "mark": "point",
+ 
+  "encoding": {
+    "x": {"field": "GDP per-capita", "type": "quantitative", "title":"GDP per-capita, $"},
+    "y": {"field": "Life Expectancy", "type": "quantitative", "title":"Life Expectancy in years", "scale": {"domain": [50,90]}},
+    "color": {"field": "GDP per-capita", "type": "quantitative", "scale": {"range": ["purple", "blue"]}}
+  }
+}
